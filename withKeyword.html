@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>With keyword</title>
+        <script type="text/javascript">
+            // A function that will work as method.
+            function addAge(years) {
+                with(this){
+                    age = years;
+                }
+            }
+
+            function student(name, course) {
+                this.name = name;
+                this.course = course;
+                this.age = 0;
+                this.addAge = addAge; // Property that is a method
+
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var record = new student("Appy", "JavaScript");
+            record.addAge(21);
+            alert("Name is " + record.name + "\nCourse is " + record.course + "\n Age is " + record.age);
+        </script>
+    </body>
+</html>

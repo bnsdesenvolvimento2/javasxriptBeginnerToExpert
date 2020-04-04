@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Object creation</title>
+        <script>
+            // Criação do objeto student.
+            var student = new Object();
+            student.name = "Appy";
+            student.age = "21";
+            student.course = "Javascript";
+
+            // Definição de funções
+            function showDetails() {
+                alert("Name: " + student.name + " Age: " + student.age + " Course: " + student.course);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="showDetails();" value = "Get student detais."/>
+    </body>
+</html>
